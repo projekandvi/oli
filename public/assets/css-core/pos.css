@@ -1,0 +1,123 @@
+.pos-table-header {
+    font-weight: bold; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    margin: 0px; 
+    margin-top: 7px;
+    color: white;
+}
+
+.pos-table-header td{
+    color: #FFF;
+}
+
+.padLpadR0{
+    padding-left: 0px; 
+    padding-right: 0px;
+}
+
+.padTpadB0{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.pos-footer{
+    margin: 0px; 
+    font-weight: bold;
+    color: #FFF; 
+    padding-top: 5px;
+    font-size: 13px;
+}
+
+.pos-discount-input{
+    width: 100%;
+    color: #000; 
+    font-size: 13px; 
+    font-weight: normal; 
+    border: 0px; 
+    padding-left: 5px; 
+    font-family: Arial, Helvetica, sans-serif; 
+    padding-top: 5px; 
+    padding-bottom: 5px;
+}
+
+.pos-product-col{
+    border: 1px solid #ddd; 
+    margin: 4px;
+    background-color: #fafce3;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.pos-product-col img{
+    padding: 5px;
+    height: 70px;
+    width: 80px;
+}
+
+.pos-total{
+    margin: 0px; 
+    font-weight: bold; 
+    color: #FFF;
+    padding-top: 7px;
+    padding-bottom: 7px; 
+    font-size: 13px; 
+    border-top: 1px solid #dddddd;
+}
+
+.pos-table{
+    border: 0px;
+    border-collapse: collapse;
+    width: 100%; 
+    height:auto;
+    color: #FFF;
+}
+
+.pos-cat-div{
+    border-bottom: 1px solid #ddd; 
+    padding-top: 11px;
+}
+
+.pos-single-cat{
+    cursor: pointer; 
+    text-align: center; 
+    width: 100px; 
+    height: 50px; 
+    text-align: center; 
+    vertical-align: middle; 
+    line-height: 50px;
+    color: white;
+}
+
+.pos-product-button{
+    margin-top: 10px; 
+    margin-left: 19px; 
+    border-radius: 5px; 
+    padding: 20px 10px 20px 10px; 
+    background-color: #005b8a; 
+    border: 0px; color: #FFF;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 13px; 
+    width: 120px;
+}
+
+.slider {    
+    width: 50%;
+}
+    
+.slick-slide {
+  margin: 0px 3px;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
+
+.zero-border-radius{
+    border-radius: 0px !important;
+}

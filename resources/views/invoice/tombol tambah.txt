@@ -1,0 +1,29 @@
+ <fieldset id="exercises">
+
+                                <div class="exercise row">
+
+                                    <div class="col-md-12">
+                                        <label>Jenis Bank</label>                           
+                                        <select class="form-control" name="jenis_bank_payment[]">
+                                            <option>-- Pilihan Bank --</option>
+                                            <option value="Bank BCA">Bank BCA </option>
+                                            <option value="Bank Mandiri">Bank Mandiri </option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label>Nomor Kartu</label>                           
+                                        <input type="number" name="nomor_kartu_payment[]" class="form-control" onKeyPress="if(this.value.length==16) return false;" >
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label>Nominal Debit</label>                           
+                                        <input type="number" name="nominal_debit_payment[]" class="form-control" onKeyPress="if(this.value.length==16) return false;" >
+                                    </div>
+                                    <button class="remove btn btn-danger" type="button">
+                                        <i class="fa fa-times"></i>
+                                    </button>
+
+                                </div>
+
+                            </fieldset>
+
+                            <button type="button" id="add_exercise" class="btn btn-primaryss"><i class="fa fa-plus"></i>&nbsp;add more</button>
