@@ -32,12 +32,21 @@
             <div class="col-lg-9">
               <div class="row">
                 <div class="col-lg-2 text-center">
-                  <img src="{{ asset('/frontend/img/george@4x.png') }}" class="img-fluid profile-photo" alt="">
-                  <div class="tombol-menu-user mb-2"><i class="far fa-eye mx-2"></i><i class="fas fa-sync-alt mx-2"></i></div>
+                  <form action="/myProfileEdit/simpan" enctype="multipart/form-data" method="POST" class="myprofile">
+                      @csrf
+                      <input type="hidden" name="id" value="{{$dataUser->id}}">
+                  {{-- <img src="{{ asset('/frontend/img/george@4x.png') }}" class="img-fluid profile-photo" alt=""> --}}
+                  <img src="{!! asset('uploads/photo_profile/'. $dataUser->photo_profile)!!}"  class="img-fluid profile-photo" alt="">
+                  <div class="tombol-menu-user mb-2"><i class="far fa-eye mx-2"></i><i class="fas fa-sync-alt mx-2" onclick="_upload()"></i> <input type="file" id="file_upload_id" style="display:none" name="photo_profile"></div>
+                  <script>
+                    function _upload(){
+                        document.getElementById('file_upload_id').click();
+                    }
+                    </script>
                   <div class="form-group form-childstage">
                     <label for="inputChildStage">Educational Stage</label>
-                    <select class="form-control" id="inputEducationalStage" name="inputEducationalStage">
-                      <option selected disabled>Educational Stage</option>
+                    <select class="form-control" id="inputEducationalStage" name="educational_stage">
+                      <option selected >{{$dataUser->educational_stage}}</option>
                       <option>Playgroup</option>
                       <option>Pre-Kindergarten</option>
                       <option>Kindergarten</option>
@@ -52,13 +61,13 @@
                   <div class="rank">Rank<img class="img-fluid" src="{{ asset('/frontend/img/rank@4x.png') }}" alt=""></div>
                 </div>
                 <div class="col-lg-10">
-                  <form class="myprofile">
+                  
                     <div class="form-group row">
                       <div class="col-lg-8">
                         <div class="row">
                           <label for="inputEmail3" class="col-sm-3 col-form-label">Full Name</label>
                           <div class="col-sm-9">
-                          <input type="email" class="form-control" id="inputEmail3" value="{{$dataUser->child_fullname}}">
+                          <input type="text" name="child_fullname" class="form-control" id="inputEmail3" value="{{$dataUser->child_fullname}}">
                           </div>
                         </div>
                       </div>
@@ -67,11 +76,11 @@
                           <label for="inputEmail3" class="col-sm-4 col-form-label">Gender</label>
                           <div class="radio-gender col-sm-8 d-flex justify-content-center">
                             <div class="form-check form-check-inline mx-3">
-                              <input class="form-check-input" type="radio" name="radioGender" id="inlineRadio1" value="option1" checked>
+                              <input class="form-check-input" type="radio" name="child_gender" id="inlineRadio1" value="boy" {{ ($dataUser->child_gender=="boy")? "checked" : "" }}>
                               <label class="form-check-label" for="inlineRadio1"><i class="fas fa-mars"></i></label>
                             </div>
                             <div class="form-check form-check-inline mx-3" id="female">
-                              <input class="form-check-input" type="radio" name="radioGender" id="inlineRadio2" value="option2">
+                              <input class="form-check-input" type="radio" name="child_gender" id="inlineRadio2" value="girl" {{ ($dataUser->child_gender=="girl")? "checked" : "" }}>
                               <label class="form-check-label" for="inlineRadio2"><i class="fas fa-venus"></i></label>
                             </div>
                           </div>
@@ -83,7 +92,7 @@
                         <div class="row">
                           <label for="inputFullName" class="col-sm-4 col-form-label">Username</label>
                           <div class="col-sm-8">
-                            <input type="text" class="form-control" id="inputFullName" name="inputFullName" value="{{$dataUser->child_username}}">
+                            <input type="text" class="form-control" id="inputFullName" name="child_username" value="{{$dataUser->child_username}}">
                           </div>
                         </div>
                       </div>
@@ -91,7 +100,7 @@
                         <div class="row">
                           <label for="inputPhone" class="col-sm-4 col-form-label">Phone No</label>
                           <div class="col-sm-8">
-                            <input type="tel" class="form-control" id="inputPhone" name="inputPhone">
+                            <input type="tel" class="form-control" id="inputPhone" name="parent_phone" value="{{$dataUser->parent_phone}}">
                           </div> 
                         </div>
                       </div>
@@ -101,7 +110,7 @@
                         <div class="row">
                           <label for="inputBio" class="col-sm-4 col-form-label">Bio</label>
                           <div class="col-sm-8">
-                            <input type="text" class="form-control" id="inputBio" name="inputBio" placeholder="">
+                            <input type="text" class="form-control" id="inputBio" name="bio" value="{{$dataUser->bio}}">
                           </div>
                         </div>
                       </div>
@@ -109,7 +118,7 @@
                         <div class="row">
                           <label for="inputBirthday" class="col-sm-4 col-form-label">Birthday</label>
                           <div class="col-sm-8">
-                            <input type="text" class="form-control datepicker" id="inputBirthday" name="inputBirthday" value="{{$dataUser->child_birthday}}">
+                            <input type="date" class="form-control" min="2008-01-01" name="child_birthday" value="{{$dataUser->child_birthday}}">
                           </div> 
                         </div>
                       </div>
@@ -119,7 +128,7 @@
                         <div class="row">
                           <label for="inputHobby" class="col-sm-4 col-form-label">Hobby</label>
                           <div class="col-sm-8">
-                            <input type="text" class="form-control" id="inputHobby" name="inputHobby" placeholder="">
+                            <input type="text" class="form-control" id="inputHobby" name="hobby" value="{{$dataUser->hobby}}">
                           </div>
                         </div>
                       </div>
@@ -129,7 +138,7 @@
                         <div class="row">
                           <label for="inputAddress" class="col-sm-2 col-form-label">Address</label>
                           <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputAddress" name="inputAddress" value="{{$dataUser->address}}">
+                            <input type="text" class="form-control" id="inputAddress" name="address" value="{{$dataUser->address}}">
                           </div>
                         </div>
                       </div>
@@ -139,7 +148,7 @@
                         <div class="row">
                           <label for="inputCountry" class="col-sm-4 col-form-label">Country</label>
                           <div class="col-sm-8">
-                            <input type="text" class="form-control" id="inputCountry" name="inputCountry" value="{{$dataUser->country}}">
+                            <input type="text" class="form-control" id="inputCountry" name="country" value="{{$dataUser->country}}">
                           </div>
                         </div>
                       </div>
@@ -147,7 +156,7 @@
                         <div class="row">
                           <label for="inputProvince" class="col-sm-5 col-form-label">Province</label>
                           <div class="col-sm-7">
-                            <input type="text" class="form-control" id="inputProvince" name="inputProvince" value="{{$dataUser->province}}">
+                            <input type="text" class="form-control" id="inputProvince" name="province" value="{{$dataUser->province}}">
                           </div> 
                         </div>
                       </div>
@@ -157,7 +166,7 @@
                         <div class="row">
                           <label for="inputCity" class="col-sm-4 col-form-label">City</label>
                           <div class="col-sm-8">
-                            <input type="text" class="form-control" id="inputCity" name="inputCity" value="{{$dataUser->city}}">
+                            <input type="text" class="form-control" id="inputCity" name="city" value="{{$dataUser->city}}">
                           </div>
                         </div>
                       </div>
@@ -165,7 +174,7 @@
                         <div class="row">
                           <label for="inputSubdis" class="col-sm-5 col-form-label">Sub-disctrict</label>
                           <div class="col-sm-7">
-                            <input type="text" class="form-control" id="inputSubdis" name="inputSubdis" value="{{$dataUser->sub_district}}">
+                            <input type="text" class="form-control" id="inputSubdis" name="sub_district" value="{{$dataUser->sub_district}}">
                           </div> 
                         </div>
                       </div>
@@ -175,7 +184,7 @@
                         <div class="row">
                           <label for="inputDistrict" class="col-sm-4 col-form-label">District</label>
                           <div class="col-sm-8">
-                            <input type="text" class="form-control" id="inputDistrict" name="inputDistrict" value="{{$dataUser->district}}">
+                            <input type="text" class="form-control" id="inputDistrict" name="district" value="{{$dataUser->district}}">
                           </div>
                         </div>
                       </div>
@@ -183,7 +192,7 @@
                         <div class="row">
                           <label for="inputPostcode" class="col-sm-5 col-form-label">Postal Code</label>
                           <div class="col-sm-7">
-                            <input type="number" class="form-control" id="inputPostcode" name="inputPostcode" value="{{$dataUser->postal_code}}">
+                            <input type="number" class="form-control" id="inputPostcode" name="postal_code" value="{{$dataUser->postal_code}}">
                           </div> 
                         </div>
                       </div>
@@ -219,9 +228,10 @@
     <script>
         AOS.init();
         $(document).ready(function() {
-          $('.datepicker').datepicker({
+          $('#datepicker').datepicker({
             uiLibrary: 'bootstrap4',
             minDate: '1/1/2008',
+            format: 'yyyy-mm-dd'
           });
         });
     </script>

@@ -54,10 +54,12 @@ Route::get('/chat', function () {
     return view('personalData.chat');
 });
 
-Route::get('/user_menu', 'FrontEndController@user_menu')->name('user_menu');
+Route::get('/myProfile', 'FrontEndController@user_menu')->name('user_menu');
 // Route::get('/user_menu', function () {
 //     return view('personalData.userMenu');
 // });
+Route::get('myProfileEdit/{dataUser}', 'FrontEndController@myProfileEdit')->name('myProfileEdits');
+Route::post('myProfileEdit/simpan', 'FrontEndController@simpanMyProfileEdit');
 
 Route::get('/educational_menu', function () {
     return view('personalData.educational_menu');
@@ -109,6 +111,14 @@ Route::get('/payment', function () {
 
 Route::get('/payment_method', function () {
     return view('personalData.payment_method');
+});
+
+Route::get('/credit_card', function () {
+    return view('personalData.credit_card');
+});
+
+Route::get('/debit_card', function () {
+    return view('personalData.debit_card');
 });
 
 Route::get('/metro_so', function () {

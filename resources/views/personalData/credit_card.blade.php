@@ -31,35 +31,48 @@
             </div>
             <div class="col-lg-9">
               <div class="row">
-                <div class="col-sm-1">
-                  <button class="btn btn-back" onclick="location.href='/setting';"><i class="fas fa-angle-left"></i></button>
+                <div class="col-lg-1">
+                  <button class="btn btn-back" onclick="location.href='/payment';"><i class="fas fa-angle-left"></i></button>
                 </div>
-                <div class="col-sm-11">
-                  <h5 class="mb-4">Payment</h5>
-                </div>
-              </div>
-              <div class="row mb-3 ed-container menu-ed d-flex align-items-center">
-                <div class="col-lg-11">
-                    <h6 class="text-white">OVO, GOPAY, LinkAja, DANA</h6>
-                </div>
-                <div class="col-lg-1 text-right">
-                  <button class="btn btn-back next" onclick="location.href='/payment_method';"><i class="fas fa-angle-right"></i></button>
-                </div>
-              </div>
-              <div class="row mb-3 ed-container menu-ed  d-flex align-items-center">
-                <div class="col-lg-11">
-                    <h6 class="text-white">Credit Card</h6>
-                </div>
-                <div class="col-lg-1 text-right">
-                  <button class="btn btn-back next" onclick="location.href='/credit_card';"><i class="fas fa-angle-right"></i></button>
-                </div>
-              </div>
-              <div class="row mb-3 ed-container menu-ed  d-flex align-items-center">
-                <div class="col-lg-11">
-                    <h6 class="text-white">Debit Card</h6>
-                </div>
-                <div class="col-lg-1 text-right">
-                  <button class="btn btn-back next" onclick="location.href='/debit_card';"><i class="fas fa-angle-right"></i></button>
+                <div class="col-lg-9">
+                    <h5>Credit Card</h5>
+                    <form class="form-cc">
+                        <div class="form-group">
+                            <label for="inputCCNum">Credit Card Number</label>
+                            <input type="number" class="form-control" id="inputCCNum" name="inputCCNum">
+                        </div>
+                       <div class="row">
+                           <div class="col-lg-6">
+                               Expiry Date
+                               <div class="form-group row d-flex align-items-center">
+                                   <div class="col-lg-5">
+                                       <input type="number" class="form-control" id="inputCCNum" name="inputCCNum">
+                                   </div>
+                                   /
+                                   <div class="col-lg-5">
+                                       <input type="number" class="form-control" id="inputCCNum" name="inputCCNum">
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-lg-6">
+                               <div class="row d-flex align-items-end">
+                                   <div class="col-lg-6">
+                                       <label for="inputCCNum">CVV</label>
+                                       <input type="number" class="form-control" id="inputCCNum" name="inputCCNum">
+                                   </div>
+                                   <div class="col-lg-6">
+                                       <img src="{{ asset('/frontend/img/cc@4x.png') }}" class="img-fluid" alt="">
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <p class="mt-5">By continuing this, you agree to our <a href="">Terms</a>, <a href="">Data Policy</a>, and <a href="">Cookie Policy</a> </p>
+                       <div class="form-group row">
+                        <div class="col-sm-10">
+                          <button type="submit" class="btn btn-success px-5">Save</button>
+                        </div>
+                      </div>
+                    </form>
                 </div>
               </div>
             </div>
