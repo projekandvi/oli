@@ -1,5 +1,11 @@
 @extends('olimpyaKidsLayout.master')
 
+@section('css')
+    <link rel="stylesheet" href="{{ asset('/frontend/libraries/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/frontend/style/main.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+@endsection
+
 @section('content')
  <!-- section official partner-->
  <section class="section-official-partner">

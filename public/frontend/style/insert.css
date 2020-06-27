@@ -1,0 +1,300 @@
+/* section createnew */
+.section-createnew {
+    font-family: 'gothmed';
+}
+
+.section-createnew input[placeholder] {
+    text-align: center;
+}
+
+.radio-gender {
+    font-size: 14px;
+    color: white;
+    margin: 0;
+}
+
+.disclaimer-policy {
+    font-size: 14px;
+    color: white;
+}
+
+.labelsignup {
+    color: white;
+}
+
+.bg-sign {
+    border-radius: 24px;
+    background-color: #E3AC38;
+    min-height: 240px;
+}
+
+.card-sign-acc {
+    border-radius: 20px;
+    min-height: 250px;
+    background-color: #7DBC4F;
+}
+
+h6.radio-caption {
+    /* display: inline; */
+}
+
+button.signup {
+    padding: 6px 42px;
+}
+
+/* section login */
+.section-login {
+    font-family: 'gothmed';
+    min-height: 550px;
+}
+
+.login-card {
+    height: 380px;
+    width: 400px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 18px;
+}
+
+.brand_logo_container {
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    top: -50px;
+    border-radius: 50%;
+    /* background: #60a3bc;
+    padding: 10px; */
+    text-align: center;
+}
+.brand_logo {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    /* border: 2px solid white; */
+}
+.form_container {
+    margin-top: 50px;
+}
+.login_btn {
+    width: 100%;
+    background: #7DBC4F !important;
+    color: white !important;
+}
+.login_btn:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+.login_container {
+    padding: 0 2rem;
+}
+.input-group-text {
+    /* background: #c0392b !important; */
+    color: #999999 !important;
+    /* border: 0 !important; */
+    /* border-radius: 0.25rem 0 0 0.25rem !important; */
+}
+
+.input_user,
+.input_pass {
+    background-color: #E6E6E6;
+}
+
+.input_user,
+.input_pass:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+
+/* section header */
+.headeruser {
+    min-height: 200px;
+    background-color: #7DBC4F;
+    border-radius: 18px;
+}
+
+.headeruser h1 {
+    font-family: 'gothbold';
+    margin: auto;
+    color: white;
+}
+
+.headeruser a {
+    padding: 5px 24px;
+    position: absolute;
+    background-color: #e6ece285;
+    border-radius: 5px;
+    right: 16px;
+    bottom: 16px;
+    font-family: 'gothmed';
+}
+
+/* section menu */
+.section-menus {
+    padding: 20px 24px;
+    margin-top: 30px;
+    background-color: #CCCCFF;
+    border-radius: 20px;
+    font-family: 'gothmed';
+}
+
+.user-menus button {
+    width: 100%;
+    background-color: #999999;
+    border: none;
+}
+
+.form-childstage {
+    font-family: 'gothmed';
+}
+
+.form-childstage input {
+    margin-top: -8px;
+}
+
+img.profile-photo {
+    height: 100px;
+}
+
+.rank {
+    font-family: 'gothmed';
+}
+
+.rank img {
+    height: 80px;
+}
+
+.radio-gender i {
+    font-size: 32px;
+    color: #4BBBE7;
+}
+
+.radio-gender #female i {
+    color: tomato;
+}
+
+/* credit-card */
+.btn-back {
+    padding: 0px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #6E6E6E;
+}
+
+.btn-back.next {
+    border: 1px solid white;
+}
+
+.form-cc p{
+    font-size: 14px;
+}
+
+/* education-desc */
+.detail-ed p{
+    font-size: 14px;
+}
+
+.detail-ed a {
+    font-size: 14px;
+}
+
+.ed-container {
+    padding: 5px;
+}
+
+.ed-container:hover {
+    background-color: #e3e2f9ac;
+    border-radius: 24px;
+}
+
+/* education-menu */
+.menu-ed {
+    padding: 6px 16px;
+    background-color: #999999;
+    border-radius: 8px;
+}
+
+.menu-ed:hover {
+    border-radius: 8px;
+}
+
+/* formal school */
+.form-formalschool, 
+.form-formalschool input {
+    font-size: 14px;
+}
+
+/* payment */
+.btn-back.next i {
+    color: white;
+}
+
+/* report */
+.download-report p {
+    margin-bottom: 0;
+}
+.download-report img {
+    height: 100px;
+}
+
+/* security */
+.form-security, 
+.form-security input {
+    font-size: 14px;
+}
+
+/* task */
+.task img {
+    height: 150px;
+}
+
+/* login2 */
+img.login2 {
+    height: 100px;
+}
+
+.form_container.login2 {
+    margin-top: 0px;
+}
+
+/* createnew2 */
+.section-createnew .akuns{
+    border-radius: 32px;
+}
+
+.akuns .akun-kosong {
+    min-height: 260px;
+    text-align: center;
+    background-color: #999999;
+    border-radius: 32px;
+}
+
+i.add-akun {
+    font-size: 32px;
+}
+
+
+.body-akuns {
+    background-color: white;
+    border-radius: 0 0 32px 32px;
+    padding: 10px;
+    text-align: center;
+}
+
+.gj-datepicker .input-group-append .btn {
+    background-color: white;
+}
+
+.gj-datepicker .input-group-append .btn:hover {
+    background-color: rgb(244, 244, 244);
+    padding-right: 30px;
+}

@@ -8,24 +8,21 @@
     <!-- Bootstrap CSS -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
     
-	<link rel="stylesheet" href="{{ asset('/frontend/libraries/bootstrap/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('/frontend/style/main.css') }}">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-     
+	  
+    @yield('css')
 
 
     <title>Olimpyakids</title>
+    
     <!-- 1. Addchat css -->
-  <link href="<?php echo asset('assets/addchat/css/addchat.min.css') ?>" rel="stylesheet">
+    @yield('Addchat_css')
+    
   </head>
 
   <body>
     <!-- 2. AddChat widget -->
-    <div id="addchat_app" 
-    data-baseurl="<?php echo url('') ?>"
-    data-csrfname="<?php echo 'X-CSRF-Token' ?>"
-    data-csrftoken="<?php echo csrf_token() ?>"
-    ></div>
+    @yield('Addchat_widget')
+    
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
@@ -59,7 +56,19 @@
                         <a class="dropdown-item" href="#"> <img src="{{ asset('/frontend/img/header/id.png') }}" alt="">ID</a>
                       </div>
                     </li>
+                    @if (Auth::check())
+                    <a class="nav-item nav-link signin mx-2" href="{{ route('logout') }}" data-aos="fade-left" data-aos-delay="300" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();"><i class="glyph-icon icon-power-off"></i>
+                          Logout
+                      </a>
+
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          {{ csrf_field() }}
+                      </form>
+                    @else                    
                     <a class="nav-item nav-link signin mx-2" href="/login" data-aos="fade-left" data-aos-delay="300">Sign In</a>
+                    @endif
+                    
                   </ul>
 
             </div>
@@ -70,11 +79,10 @@
     @yield('content')
 
     @yield('footer')
+
     <!-- 3. AddChat JS -->
-    <!-- Modern browsers -->
-    <script type="module" src="<?php echo asset('assets/addchat/js/addchat.min.js') ?>"></script>
-    <!-- Fallback support for Older browsers -->
-    <script nomodule src="<?php echo asset('assets/addchat/js/addchat-legacy.min.js') ?>"></script>
+    @yield('Addchat_js')
+    
     
     @yield('js')
   </body>

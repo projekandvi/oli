@@ -852,22 +852,6 @@ p.ringkasan {
     font-size: 10px;
 }
 
-/* .jumlah-sub {
-    margin-left: 20px;
-}
-
-.judul-sub {
-    margin-left: 20px;
-}
-
-.divide-sub {
-    margin-left: 30px;
-}
-
-.tbl-sub {
-    margin-left: 20px;
-} */
-
 .btn-like.fb {
     background-color: #345A98;
 }
@@ -1030,6 +1014,7 @@ button.signup {
 
 /* section login */
 .section-login {
+    font-family: 'gothmed';
     min-height: 550px;
 }
 
@@ -1107,7 +1092,9 @@ button.signup {
 }
 
 .headeruser h1 {
+    font-family: 'gothbold';
     margin: auto;
+    color: white;
 }
 
 .headeruser a {
@@ -1117,6 +1104,7 @@ button.signup {
     border-radius: 5px;
     right: 16px;
     bottom: 16px;
+    font-family: 'gothmed';
 }
 
 /* section menu */
@@ -1125,11 +1113,160 @@ button.signup {
     margin-top: 30px;
     background-color: #CCCCFF;
     border-radius: 20px;
+    font-family: 'gothmed';
 }
 
 .user-menus button {
     width: 100%;
     background-color: #999999;
+    border: none;
+}
+
+.form-childstage {
+    font-family: 'gothmed';
+}
+
+.form-childstage input {
+    margin-top: -8px;
+}
+
+img.profile-photo {
+    height: 100px;
+}
+
+.rank {
+    font-family: 'gothmed';
+}
+
+.rank img {
+    height: 80px;
+}
+
+.radio-gender i {
+    font-size: 32px;
+    color: #4BBBE7;
+}
+
+.radio-gender #female i {
+    color: tomato;
+}
+
+/* credit-card */
+.btn-back {
+    padding: 0px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #6E6E6E;
+}
+
+.btn-back.next {
+    border: 1px solid white;
+}
+
+.form-cc p{
+    font-size: 14px;
+}
+
+/* education-desc */
+.detail-ed p{
+    font-size: 14px;
+}
+
+.detail-ed a {
+    font-size: 14px;
+}
+
+.ed-container {
+    padding: 5px;
+}
+
+.ed-container:hover {
+    background-color: #e3e2f9ac;
+    border-radius: 24px;
+}
+
+/* education-menu */
+.menu-ed {
+    padding: 6px 16px;
+    background-color: #999999;
+    border-radius: 8px;
+}
+
+.menu-ed:hover {
+    border-radius: 8px;
+}
+
+/* formal school */
+.form-formalschool, 
+.form-formalschool input {
+    font-size: 14px;
+}
+
+/* payment */
+.btn-back.next i {
+    color: white;
+}
+
+/* report */
+.download-report p {
+    margin-bottom: 0;
+}
+.download-report img {
+    height: 100px;
+}
+
+/* security */
+.form-security, 
+.form-security input {
+    font-size: 14px;
+}
+
+/* task */
+.task img {
+    height: 150px;
+}
+
+/* login2 */
+img.login2 {
+    height: 100px;
+}
+
+.form_container.login2 {
+    margin-top: 0px;
+}
+
+/* createnew2 */
+.section-createnew .akuns{
+    border-radius: 32px;
+}
+
+.akuns .akun-kosong {
+    min-height: 260px;
+    text-align: center;
+    background-color: #999999;
+    border-radius: 32px;
+}
+
+i.add-akun {
+    font-size: 32px;
+}
+
+
+.body-akuns {
+    background-color: white;
+    border-radius: 0 0 32px 32px;
+    padding: 10px;
+    text-align: center;
+}
+
+.gj-datepicker .input-group-append .btn {
+    background-color: white;
+}
+
+.gj-datepicker .input-group-append .btn:hover {
+    background-color: rgb(244, 244, 244);
+    padding-right: 30px;
 }
 
 
@@ -1153,20 +1290,7 @@ button.signup {
     background-color: #E3AC38;
 }
 
-/* .dropdown-toggle,
-.dropdown-menu {
-    border-radius: 0px !important;
-}
-.dropdown-item:hover {
-    color: white;
-    background-color: #dc3545;
-}
-.btn-danger {
-    width: 55%;
-}
-.dropdown:hover>.dropdown-menu {
-    display: block;
-} */
+
 @media (max-width: 767px) {
 .jumbotron {
     background-color: white;

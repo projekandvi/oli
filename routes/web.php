@@ -49,8 +49,66 @@ Route::post('/signup', 'PenggunaController@store');
 Route::group(['middleware' =>['auth']], function(){
 
 
-Route::get('/metro', function () {
-    return view('metro');
+
+Route::get('/chat', function () {
+    return view('personalData.chat');
+});
+
+Route::get('/user_menu', 'FrontEndController@user_menu')->name('user_menu');
+// Route::get('/user_menu', function () {
+//     return view('personalData.userMenu');
+// });
+
+Route::get('/educational_menu', function () {
+    return view('personalData.educational_menu');
+});
+
+Route::get('/educational_formal', function () {
+    return view('personalData.educational_formal');
+});
+
+Route::get('/edit_educational_formal', function () {
+    return view('personalData.edit_educational_formal');
+});
+
+Route::get('/add_educational_formal', function () {
+    return view('personalData.add_educational_formal');
+});
+
+Route::get('/educational_informal', function () {
+    return view('personalData.educational_informal');
+});
+
+Route::get('/edit_educational_informal', function () {
+    return view('personalData.edit_educational_informal');
+});
+
+Route::get('/add_educational_informal', function () {
+    return view('personalData.add_educational_informal');
+});
+
+Route::get('/task', function () {
+    return view('personalData.task');
+});
+
+Route::get('/report', function () {
+    return view('personalData.report');
+});
+
+Route::get('/setting', function () {
+    return view('personalData.setting');
+});
+
+Route::get('/security', function () {
+    return view('personalData.security');
+});
+
+Route::get('/payment', function () {
+    return view('personalData.payment');
+});
+
+Route::get('/payment_method', function () {
+    return view('personalData.payment_method');
 });
 
 Route::get('/metro_so', function () {
