@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 d-flex justify-content-center headeruser p-4">
-                    <h1>Welcome Back, GeorgeMid14!</h1>
+                    <h1>Welcome Back, {{$dataUser->child_fullname}}</h1>
                     <a href="" class="text-white">Add Image</a>
                 </div>
             </div>
@@ -36,13 +36,15 @@
                 </div>
               <div class="col-lg-9">
               <h5 class="mb-4">Add Non Formal School</h5>
-              <form class="form-formalschool">
+              <form action="/educationalInformal/simpan" enctype="multipart/form-data" method="POST" class="form-formalschool">
+                @csrf
+                <input type="hidden" name="id_user" value="{{ Auth::user()->id }}">
                 <div class="form-group row">
                   <div class="col-lg-12">
                     <div class="row">
                       <label for="inputName" class="col-sm-3 col-form-label">Name</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="inputName" name="inputName" placeholder="Jakarta International School">
+                        <input type="text" class="form-control" id="inputName" name="name" placeholder="Jakarta International School">
                       </div>
                     </div>
                   </div>
@@ -52,7 +54,7 @@
                     <div class="row">
                       <label for="inputType" class="col-sm-5 col-form-label">Type</label>
                       <div class="col-sm-7">
-                        <input type="text" class="form-control" id="inputType" name="inputType" placeholder="Courses">
+                        <input type="text" class="form-control" id="inputType" name="type" placeholder="Courses">
                       </div>
                     </div>
                   </div>
@@ -60,7 +62,7 @@
                     <div class="row">
                       <label for="inputSubject" class="col-sm-4 col-form-label">Subject</label>
                       <div class="col-sm-8">
-                        <input type="text" class="form-control" id="inputSubject" name="inputSubject" placeholder="Math">
+                        <input type="text" class="form-control" id="inputSubject" name="subject" placeholder="Math">
                       </div>
                     </div>
                   </div>
@@ -70,7 +72,7 @@
                     <div class="row">
                       <label for="inputSchoolAddress" class="col-sm-3 col-form-label">School Address</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" id="inputSchoolAddress" name="inputSchoolAddress" placeholder="Jalan Bintaro Utara Blok Q1 No. 11 Sektor 1">
+                        <input type="text" class="form-control" id="inputSchoolAddress" name="school_address" placeholder="Jalan Bintaro Utara Blok Q1 No. 11 Sektor 1">
                       </div>
                     </div>
                   </div>
@@ -80,7 +82,7 @@
                     <div class="row">
                       <label for="inputProvince" class="col-sm-5 col-form-label">Province</label>
                       <div class="col-sm-7">
-                        <input type="text" class="form-control" id="inputProvince" name="inputProvince" placeholder="DKI Jakarta">
+                        <input type="text" class="form-control" id="inputProvince" name="province" placeholder="DKI Jakarta">
                       </div>
                     </div>
                   </div>
@@ -88,7 +90,7 @@
                     <div class="row">
                       <label for="inputCity" class="col-sm-4 col-form-label">City</label>
                       <div class="col-sm-8">
-                        <input type="text" class="form-control" id="inputCity" name="inputCity" placeholder="South Jakarta">
+                        <input type="text" class="form-control" id="inputCity" name="city" placeholder="South Jakarta">
                       </div>
                     </div>
                   </div>

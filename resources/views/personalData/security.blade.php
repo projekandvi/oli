@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 d-flex justify-content-center headeruser p-4">
-                    <h1>Welcome Back, GeorgeMid14!</h1>
+                    <h1>Welcome Back, {{$dataUser->child_fullname}}</h1>
                     <a href="" class="text-white">Add Image</a>
                 </div>
             </div>
@@ -36,7 +36,8 @@
                 </div>
                 <div class="col-lg-11">
                   <h5>Security</h5>
-                    <form class="form-security">
+                    <form action="/changePassword" enctype="multipart/form-data" method="POST" class="form-security">
+                        @csrf
                        <div class="row d-flex align-items-center">
                          <div class="col-lg-3">
                            Old Password
@@ -44,7 +45,7 @@
                           <div class="col-lg-9">
                               <div class="form-group row d-flex align-items-center">
                                   <div class="col-lg-5">
-                                      <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="">
+                                      <input type="password" class="form-control" id="inputPassword" name="current_password" placeholder="Please Input Current Password">
                                   </div>
                               </div>
                           </div>
@@ -56,7 +57,7 @@
                          <div class="col-lg-9">
                              <div class="form-group row d-flex align-items-center">
                                  <div class="col-lg-5">
-                                     <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="">
+                                     <input type="password" class="form-control" id="inputPassword" name="new_password" placeholder="Input New Password">
                                  </div>
                              </div>
                          </div>
@@ -68,7 +69,7 @@
                          <div class="col-lg-9">
                              <div class="form-group row d-flex align-items-center">
                                  <div class="col-lg-5">
-                                     <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="">
+                                     <input type="password" class="form-control" id="inputPassword" name="confirm_password" placeholder="Confirm New Password">
                                  </div>
                              </div>
                          </div>

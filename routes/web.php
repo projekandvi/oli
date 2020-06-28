@@ -50,9 +50,7 @@ Route::group(['middleware' =>['auth']], function(){
 
 
 
-Route::get('/chat', function () {
-    return view('personalData.chat');
-});
+Route::get('/chat', 'FrontEndController@chat')->name('chat');
 
 Route::get('/myProfile', 'FrontEndController@user_menu')->name('user_menu');
 // Route::get('/user_menu', function () {
@@ -61,65 +59,54 @@ Route::get('/myProfile', 'FrontEndController@user_menu')->name('user_menu');
 Route::get('myProfileEdit/{dataUser}', 'FrontEndController@myProfileEdit')->name('myProfileEdits');
 Route::post('myProfileEdit/simpan', 'FrontEndController@simpanMyProfileEdit');
 
-Route::get('/educational_menu', function () {
-    return view('personalData.educational_menu');
-});
+Route::get('/educational_menu', 'FrontEndController@educational_menu')->name('educational_menu');
 
-Route::get('/educational_formal', function () {
-    return view('personalData.educational_formal');
-});
-
-Route::get('/edit_educational_formal', function () {
-    return view('personalData.edit_educational_formal');
-});
+Route::get('/educational_formal', 'FrontEndController@educationalFormal')->name('educationalFormal');
 
 Route::get('/add_educational_formal', function () {
-    return view('personalData.add_educational_formal');
+    return view('educational.add_educational_formal');
 });
+Route::post('educationalFormal/simpan', 'FrontEndController@simpanEducationalFormal');
 
-Route::get('/educational_informal', function () {
-    return view('personalData.educational_informal');
-});
+Route::get('edit_educational_formal/{dataEducationFormal}', 'FrontEndController@edit_educational_formal')->name('edit_educational_formal');
+Route::post('educationalFormalEdit/simpan', 'FrontEndController@simpanEducationalFormalEdit');
 
-Route::get('/edit_educational_informal', function () {
-    return view('personalData.edit_educational_informal');
-});
+
+Route::get('/educational_informal', 'FrontEndController@educationalInformal')->name('educationalInformal');
+Route::post('educationalInformal/simpan', 'FrontEndController@simpanEducationalInformal');
+
+Route::get('edit_educational_informal/{dataEducationInformal}', 'FrontEndController@edit_educational_informal')->name('edit_educational_informal');
+Route::post('educationalInformalEdit/simpan', 'FrontEndController@simpanEducationalInformalEdit');
 
 Route::get('/add_educational_informal', function () {
-    return view('personalData.add_educational_informal');
+    return view('educational.add_educational_informal');
 });
 
-Route::get('/task', function () {
-    return view('personalData.task');
-});
 
-Route::get('/report', function () {
-    return view('personalData.report');
-});
+Route::get('/task', 'FrontEndController@task')->name('task');
 
-Route::get('/setting', function () {
-    return view('personalData.setting');
-});
+Route::get('/report', 'FrontEndController@report')->name('report');
 
-Route::get('/security', function () {
-    return view('personalData.security');
-});
+
+Route::get('/setting', 'FrontEndController@setting')->name('setting');
+Route::get('/security', 'FrontEndController@security')->name('security');
+
+Route::post('changePassword', 'FrontEndController@changePassword');
 
 Route::get('/payment', function () {
     return view('personalData.payment');
 });
 
-Route::get('/payment_method', function () {
-    return view('personalData.payment_method');
-});
 
-Route::get('/credit_card', function () {
-    return view('personalData.credit_card');
-});
 
-Route::get('/debit_card', function () {
-    return view('personalData.debit_card');
-});
+Route::get('/payment', 'FrontEndController@payment')->name('payment');
+Route::get('/payment_method', 'FrontEndController@payment_method')->name('payment_method');
+Route::get('/credit_card', 'FrontEndController@credit_card')->name('credit_card');
+Route::get('/debit_card', 'FrontEndController@debit_card')->name('debit_card');
+
+
+
+
 
 Route::get('/metro_so', function () {
     return view('metro_so');

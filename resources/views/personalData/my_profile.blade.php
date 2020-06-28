@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 d-flex justify-content-center headeruser p-4">
-                    <h1>Welcome Back, GeorgeMid14!</h1>
+                    <h1>Welcome Back, {{$dataUser->child_fullname}}</h1>
                     <a href="" class="text-white">Add Image</a>
                 </div>
             </div>
@@ -32,7 +32,7 @@
             <div class="col-lg-9">
               <div class="row">
                 <div class="col-lg-2 text-center">
-                  <img src="{{ asset('/frontend/img/george@4x.png') }}" class="img-fluid profile-photo" alt="">
+                  <img src="{!! asset('uploads/photo_profile/'. $dataUser->photo_profile)!!}"  class="img-fluid profile-photo" alt="">
                   <div class="tombol-menu-user mb-2"><i class="far fa-eye mx-2"></i><i class="fas fa-sync-alt mx-2"></i></div>
                   <div class="form-group form-childstage">
                     <label for="inputChildStage">Educational Stage</label>

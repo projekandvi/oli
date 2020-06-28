@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 d-flex justify-content-center headeruser p-4">
-                    <h1>Welcome Back, GeorgeMid14!</h1>
+                    <h1>Welcome Back, {{$dataUser->child_fullname}}</h1>
                     <a href="" class="text-white">Add Image</a>
                 </div>
             </div>
@@ -30,22 +30,22 @@
               @include('personalData.menu')
             </div>
             <div class="col-lg-9">
-              <div class="row mb-4 ed-container">
+              <div class="row mb-3 ed-container menu-ed d-flex align-items-center">
                 <div class="col-lg-11">
-                    <h6 class="type-ed">Formal School</h6>
-                    <div class="detail-ed ml-3">
-                        <p class="mb-0">Jakarta International School - TK B</p>
-                        <p class="mb-0">Jalan Terogong Raya No. 33</p>
-                        <p class="mb-0">South Jakarta - DKI Jakarta</p>
-                        <p class="mb-0">Extracurricular : Footbal</p>
-                        <a href="/edit_educational_formal" class="mr-2">Edit</a><a href="/add_educational_formal" class="mr-2">Add Formal School</a>
-                    </div>
+                    <h6 class="text-white">Formal School</h6>
                 </div>
                 <div class="col-lg-1 text-right">
-                  <button class="btn btn-back" onclick="location.href='/educational_menu';"><i class="fas fa-angle-left"></i></button>
+                  <button class="btn btn-back next" onclick="location.href='/educational_formal';"><i class="fas fa-angle-right"></i></button>
                 </div>
               </div>
-              
+              <div class="row mb-3 ed-container menu-ed  d-flex align-items-center">
+                <div class="col-lg-11">
+                    <h6 class="text-white">Non-formal School</h6>
+                </div>
+                <div class="col-lg-1 text-right">
+                  <button class="btn btn-back next" onclick="location.href='/educational_informal';"><i class="fas fa-angle-right"></i></button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

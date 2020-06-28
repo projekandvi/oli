@@ -84,5 +84,6 @@ class RegisterController extends Controller
             'sub_district' => $data['sub_district'],
             'postal_code' => $data['postal_code'],
         ]);
+
     }
 }

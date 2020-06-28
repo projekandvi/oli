@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 d-flex justify-content-center headeruser p-4">
-                    <h1>Welcome Back, GeorgeMid14!</h1>
+                    <h1>Welcome Back, {{$dataUser->child_fullname}}</h1>
                     <a href="" class="text-white">Add Image</a>
                 </div>
             </div>

@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 d-flex justify-content-center headeruser p-4">
-                    <h1>Welcome Back, GeorgeMid14!</h1>
+                    <h1>Welcome Back, {{ Auth::user()->child_fullname }}</h1>
                     <a href="" class="text-white">Add Image</a>
                 </div>
             </div>
@@ -34,11 +34,16 @@
                 <div class="col-lg-11">
                     <h6 class="type-ed">Non-formal School</h6>
                     <div class="detail-ed ml-3">
-                        <p class="mb-0">KUMON</p>
-                        <p class="mb-0">Math - Course</p>
-                        <p class="mb-0">Jalan Bintaro Utara Blok Q1 No. 11 Sektor 1</p>
-                        <p class="mb-0">South Jakarta - DKI Jakarta</p>
-                        <a href="/edit_educational_informal" class="mr-2">Edit</a><a href="/add_educational_informal" class="mr-2">Add Formal School</a>
+                      @if ($dataEducationalInformal === null)
+                        <a href="/add_educational_informal" class="mr-2">Add Informal School</a>
+                      @else
+                        <p class="mb-0">{{$dataEducationalInformal->name}}</p>
+                        <p class="mb-0">{{$dataEducationalInformal->subject}} - {{$dataEducationalInformal->type}}</p>
+                        <p class="mb-0">{{$dataEducationalInformal->school_address}}</p>
+                        <p class="mb-0">{{$dataEducationalInformal->city}} - {{$dataEducationalInformal->province}}</p>
+                        <a href="/edit_educational_informal/{{$dataEducationalInformal->id}}" class="mr-2">Edit</a>
+                      @endif
+                        
                     </div>
                 </div>
                 <div class="col-lg-1 text-right">

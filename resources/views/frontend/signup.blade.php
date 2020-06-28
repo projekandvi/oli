@@ -31,11 +31,11 @@
                     <div class="form-group col-md-6 radio-gender justify-content-center">
                       <h6 class="radio-caption mb-0">Child's Gender</h6>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="child_gender" id="inlineRadio1" value="Girl" checked>
+                        <input class="form-check-input" type="radio" name="child_gender" id="inlineRadio1" value="girl" checked>
                         <label class="form-check-label" for="inlineRadio1">Girl</label>
                       </div>
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="child_gender" id="inlineRadio2" value="Boy">
+                        <input class="form-check-input" type="radio" name="child_gender" id="inlineRadio2" value="boy">
                         <label class="form-check-label" for="inlineRadio2">Boy</label>
                       </div>
                     </div>
